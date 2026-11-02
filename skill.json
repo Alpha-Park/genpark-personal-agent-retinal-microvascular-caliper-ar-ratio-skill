@@ -1,0 +1,25 @@
+{
+  "name": "genpark-personal-agent-retinal-microvascular-caliper-ar-ratio-skill",
+  "version": "1.0.0",
+  "description": "Calculates Central Retinal Arteriolar/Venular Equivalents (CRAE/CRVE), Arteriolar-to-Venular Ratio (AVR), and models cerebral microvascular pulsatility strain.",
+  "tools": [
+    {
+      "name": "calculate_retinal_avr_and_microvascular_risk",
+      "description": "Calculates retinal Arteriolar-to-Venular Ratio (AVR), CRAE, CRVE, and systemic microangiopathy index.",
+      "parameters": {
+        "crae_microns": "float (default 152.0)",
+        "crve_microns": "float (default 210.0)",
+        "age": "int (default 42)",
+        "systolic_bp": "float (default 124.0)"
+      }
+    },
+    {
+      "name": "evaluate_cerebral_microvascular_velocity",
+      "description": "Correlates retinal AVR with cerebral microvascular pulsatility strain and end-organ risk.",
+      "parameters": {
+        "avr_ratio": "float (default 0.72)",
+        "pulse_pressure": "float (default 46.0)"
+      }
+    }
+  ]
+}
